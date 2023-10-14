@@ -18,7 +18,9 @@ def main():
       if address:
          st.write(f"Your address: {address}")
       if description:
+         # extracted sqft information from LLM
          st.write(f"Information: {description}")
+         
    
 
 if __name__ == "__main__":

@@ -13,19 +13,19 @@ st.set_page_config(
     layout="wide",
 )
 
-tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+# tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
-with tab1:
-   st.header("A cat")
-   st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+# with tab1:
+#    st.header("A cat")
+#    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
 
-with tab2:
-   st.header("A dog")
-   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+# with tab2:
+#    st.header("A dog")
+#    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
 
-with tab3:
-   st.header("An owl")
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+# with tab3:
+#    st.header("An owl")
+#    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 dataset_url = "https://raw.githubusercontent.com/Lexie88rus/bank-marketing-analysis/master/bank.csv"
 
 @st.cache_data
@@ -48,10 +48,13 @@ if uploaded_image is not None:
     # Optionally, you can perform some processing on the uploaded image here
     # For example, you can use PIL to resize or manipulate the image
 
-    # Example: Resize the uploaded image to a fixed width
+    # Example: Resize the uploaded image to a fixed width    
     img = Image.open(uploaded_image)
+    new_height = 200
+    new_width = int((new_height / img.height) * img.width)
+    img_resized = img.resize((new_width, new_height))
     st.subheader("Processed Image")
-    st.image(img, caption="Processed Image", use_column_width=True)
+    st.image(img, caption="Processed Image", use_column_width=False)
 
 job_filter = st.selectbox("select the job", pd.unique(df["job"]))
 df = df[df["job"] == job_filter]
@@ -111,3 +114,6 @@ for seconds in range(200):
         st.markdown("### Detailed Data View")
         st.dataframe(df)
         time.sleep(1)
+
+def func():
+    return True

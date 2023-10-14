@@ -9,7 +9,7 @@ def create_pvgis_api_url(lat: float, lon: float, peak_power: float):
 
 
 def get_radiation_data(coordinates, area):
-    url = create_pvgis_api_url(40.767, -7.910, 1)
+    url = create_pvgis_api_url(3.5, 3.5, 1)
     response = requests.get(url)
 
     if response.status_code == 200:

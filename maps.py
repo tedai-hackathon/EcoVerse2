@@ -4,6 +4,9 @@ import torch
 from PIL import Image
 import requests
 
+
+GOOGLE_MAPS_API_KEY = "AIzaSyDBGZsGvmNASpvgMRwQ2cpmz8tIgsiwFR0"
+
 def get_location_image_with_key(user_location, api_key, signature=None):
     base_url = "https://maps.googleapis.com/maps/api/staticmap?"
     params = {
@@ -31,7 +34,7 @@ def get_location_image_with_key(user_location, api_key, signature=None):
         return None
 
 # Replace 'YOUR_API_KEY' with your actual API key
-api_key = 'YOUR_API_KEY'
+api_key = GOOGLE_MAPS_API_KEY
 
 image_path = get_location_image_with_key(user_location, api_key)
 

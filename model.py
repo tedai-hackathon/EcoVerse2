@@ -9,5 +9,5 @@ chat = ChatOpenAI()
 
 
 def get_area(user_input_string):
-    llm_output = chat([HumanMessage(content=f"You are a helpful AI assistant. User has provided a description of usable area for installing a solar panel. {user_input}. Return the area in sq ft from the description: ")])
+    llm_output = chat([HumanMessage(content=f"You are a helpful AI assistant. User has provided a textual description of usable area for installing a solar panel. {user_input}. Extract the area in sq ft from the description: ")])
     return float(llm_output)

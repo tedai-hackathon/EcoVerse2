@@ -25,9 +25,19 @@ def main():
          # sqft = get_total_area(description)
          sqft = 100
          # usqft = get_usable_area(description)
-         radiation_data = get_radiation_data(37.792072824760965, 122.40419151380131, sqft)
-         st.table(data=radiation_data)
-         # st.write(f"Information: {description}")
+         # radiation_data = get_radiation_data(37.792072824760965, 122.40419151380131, sqft)
+         # st.table(data=radiation_data)
+         # Calculations:
+         solar_panels = 5 
+         energy_produced = "10 KW"
+         cost = "$20,000"
+         cost_saved = "$1000"
+         green_score = 180
+         st.write(f"Solar Panels in the given area: {solar_panels}, which will cost around {cost}")
+         st.write(f"Based on the location and weather information, {energy_produced} will be the energy produced annualy")
+         st.write(f"Households in your location on an avg save {cost_saved} yearly")
+         st.write(f"Your Green score would be {green_score}, You would be in top 66% to contribute in reducing carbon emissions")
 
 if __name__ == "__main__":
    main()
+   

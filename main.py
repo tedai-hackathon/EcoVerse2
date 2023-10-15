@@ -83,6 +83,7 @@ def main():
          st.title("Energy generated last day by hour.")
          st.line_chart(df.set_index('time')['Energy (kWh)'])      
          # st.line_chart(df, y='Energy (kWh)')
+         
          st.markdown(f"**Solar Panels in the given area:** {solar_panels}")
          st.write(f"Solar Panels in the given area: {solar_panels}, which will cost around {cost}")
          st.write(f"Based on the location and weather information, {energy_produced} will be the energy produced annualy")

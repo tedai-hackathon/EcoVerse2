@@ -7,7 +7,7 @@
 Our target user is part of the 840 million people around the world who are living in "energy poverty."  We want to make it simple for them to access information on the first introduction to sustainable energy, make it an easy step for figuring out next steps on equipment requirements based on square footage available and then allow the user to approach a crowdfunding opportunity to raise funds for the installation.  
 This tool could also open up frontier markets where there is potential for wind and solar farms, but there is a need for a catalyst to make development decisions easier and quicker. 
 
-**What does it do: **
+**What does it do**: 
 1.	Point camera and take photo of area such as a rooftop, the AI can calculates sq meters of the area available for solar panel installation on a rooftop. (Allow user to upload photo and then the query tool responds with how many solar panels needed.)
 2. LLM provides feedback on recommendations on how many solar panels to deploy, the cost, and the ROI. 
 3.	Provide a dashboard of weather metrics that are conducive to renewable energy such as solar radiance and wind speed.

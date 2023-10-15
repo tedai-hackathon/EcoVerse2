@@ -3,6 +3,7 @@ from langchain.chat_models import ChatOpenAI
 import os
 
 # os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 chat = ChatOpenAI()
 
 

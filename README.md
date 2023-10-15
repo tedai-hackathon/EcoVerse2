@@ -22,7 +22,9 @@ With the rising global population and the increasing demand for energy, it is cr
 Conventional power infrastructure often fails to reach remote and impoverished regions, leaving communities in darkness.  EcoVerse makes it easier to take the first step to help with bringing power generation and light to those communities around the world. 
 
 Plans include developing a crowdfunding feature to allow those in off-grid locations and "energy poverty" to raise funds to install their sustainable energy projects.
-Ecoverse AI - Optimizing renewable Energy Usage
+
+
+**Ecoverse AI - Optimizing sustainable Energy Usage**
 
 
 To run the application 

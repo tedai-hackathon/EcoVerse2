@@ -23,6 +23,13 @@ Conventional power infrastructure often fails to reach remote and impoverished r
 
 Plans include developing a crowdfunding feature to allow those in off-grid locations and "energy poverty" to raise funds to install their sustainable energy projects.
 
+**Technologies Used**:
+
+Stream lit
+Open AI Chat GPT for textual extraction and reasoning
+Visual Question Answering Model to extract land use area in square meters from an image
+Replicate to run inference on the model
+IRENA Dataset to determine solar installation costs depending on the user country
 
 **Ecoverse AI - Optimizing sustainable Energy Usage**
 

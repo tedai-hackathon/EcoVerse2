@@ -1,7 +1,7 @@
 import streamlit as st
 
 # from dashboard import func
-from model import get_area_llava, get_cost_of_installing
+from model import get_area_llava, get_cost_of_installing, get_total_area
 from energy import get_radiation_data
 import requests
 import pandas as pd
@@ -54,28 +54,31 @@ def main():
             st.write(f"Your address: {address}")
         if description:
             # extracted sqft information from LLM
-            # sqft = get_total_area(description)
+            new_sqft = get_total_area(description)
             # sqft = 100
             # Calculations:
+            if not new_sqft:
+                # @harsha to update LLM function. The output should be a float number not a string.
+                # new_sqft = get_total_area(image)
+                try:
+                    new_sqft = get_area_llava(image_data)
+                except Exception as e:
+                    print(f"Visual QA output invalid {e}")
+                    new_sqft = 100
 
-            # @harsha to update LLM function. The output should be a float number not a string.
-            # new_sqft = get_total_area(image)
-            try:
-                new_sqft = get_area_llava(image_data)
-            except Exception as e:
-                print(f"Visual QA output invalid {e}")
-                new_sqft = 100
-            
             # define constants
             sq_meter_to_sq_ft = 10.76
             single_solar_panel_sq_ft = 15
             available_area_ratio = 0.33
-            
-            solar_panels = (new_sqft * available_area_ratio * sq_meter_to_sq_ft )/single_solar_panel_sq_ft  # @harsha to update open ai call.
+
+            solar_panels = (
+                new_sqft * available_area_ratio * sq_meter_to_sq_ft
+            ) / single_solar_panel_sq_ft  # @harsha to update open ai call.
             country_name = "USA"
-            cost_of_installation = get_cost_of_installing(number_of_panels=solar_panels, country=country_name)
-            energy_produced = solar_panels * 0.3 # in kW  # @harsha to update open ai call.
-            cost = "$20,000"  # @harsha to update open ai call.
+            energy_produced = solar_panels * 0.3  # in kW  # @harsha to update open ai call.
+            # cost = "$20,000"  # @harsha to update open ai call.
+            cost = get_cost_of_installing(number_of_panels=solar_panels, country=country_name)
+
             cost_saved = "$1000"  # @harsha to update open ai call.
             green_score = 180  # @harsha to update open ai call.
 
@@ -97,7 +100,7 @@ def main():
             # st.line_chart(df, y='Energy (kWh)')
 
             st.markdown(f"**Solar Panels in the given area:** {solar_panels}")
-            st.write(f"Solar Panels in the given area: {solar_panels}, which will cost around {cost}")
+            st.write(f"Solar Panels in the given area: {solar_panels}, which will cost around {cost} USD")
             st.write(
                 f"Based on the location and weather information, {energy_produced} will be the energy produced annualy"
             )

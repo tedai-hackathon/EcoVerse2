@@ -2,7 +2,8 @@
 **Problem statement:** How do we get more people using renewable energy sources in a sustainable manner? How do we help communities and individuals quickly determine a renewable energy project’s viability with the help of AI? Our solution is aligned with the UN SGD (“United Nations Sustainable Development Goals”) 7, “Ensure access to affordable, reliable, sustainable and modern energy for all.” 
 
 **Solution:** Our solution aims to help analyze the potential for renewable energy generation in your surroundings and make recommendations for how to best optimize renewable energy for your location. The solution also compares the cost savings from installing and using renewable energy versus the traditional grid electricity pricing of the area. These tools could open up frontier markets where there is potential for wind and solar farms, but there is a need for a catalyst to make development decisions easier and quicker. 
-Our Target User:
+
+**Our Target User**:
 Our target user is part of the 840 million people around the world who are living in "energy poverty."  We want to make it simple for them to access information on the first introduction to sustainable energy, make it an easy step for figuring out next steps on equipment requirements based on square footage available and then allow the user to approach a crowdfunding opportunity to raise funds for the installation.  
 This tool could also open up frontier markets where there is potential for wind and solar farms, but there is a need for a catalyst to make development decisions easier and quicker. 
 

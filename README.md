@@ -25,11 +25,11 @@ Plans include developing a crowdfunding feature to allow those in off-grid locat
 
 **Technologies Used**:
 
-Stream lit
-Open AI Chat GPT for textual extraction and reasoning
-Visual Question Answering Model to extract land use area in square meters from an image
-Replicate to run inference on the model
-IRENA Dataset to determine solar installation costs depending on the user country
+1. Stream lit
+2. Open AI Chat GPT for textual extraction and reasoning
+3. Visual Question Answering Model to extract land use area in square meters from an image
+4. Replicate to run inference on the model
+5. IRENA Dataset to determine solar installation costs depending on the user country
 
 **Ecoverse AI - Optimizing sustainable Energy Usage**
 

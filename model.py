@@ -6,33 +6,37 @@ import re
 import pandas as pd
 from io import StringIO
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 os.environ["REPLICATE_API_TOKEN"] = "r8_TWs3Bhg1pYdQKkvrhyeTEnPOYpI30lu0Lc7Oh"
 chat = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
 
 def get_usable_area(user_input_string):
-    llm_output = chat(
-        [
-            HumanMessage(
-                content=f"You are a helpful AI assistant. User has provided a textual description of usable area for installing a solar panel. {user_input_string}. Extract the usable area in sq ft from the description: "
-            )
-        ]
-    )
-    # return float(llm_output)
-    return 100
-
+    try:
+        llm_output = chat(
+            [
+                HumanMessage(
+                    content=f"You are a helpful AI assistant. User has provided a textual description of usable area for installing a solar panel. {user_input_string}. Extract the usable area in sq ft from the description: "
+                )
+            ]
+        )
+        return float(llm_output)
+    except Exception:
+        return None
+    
 
 def get_total_area(user_input_string):
-    llm_output = chat(
-        [
-            HumanMessage(
-                content=f"You are a helpful AI assistant. User has provided a textual description of usable area for installing a solar panel. {user_input_string}. Extract the total area in sq ft from the description: "
-            )
-        ]
-    )
-    # return float(llm_output)
-    return 100
+    try:
+        llm_output = chat(
+            [
+                HumanMessage(
+                    content=f"You are a helpful AI assistant. User has provided a textual description of usable area for installing a solar panel. {user_input_string}. Extract the total area in sq ft from the description: "
+                )
+            ]
+        )
+        return float(llm_output)
+    except Exception:
+        return None
 
 
 def get_area_llava(image_data):

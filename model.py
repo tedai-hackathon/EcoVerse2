@@ -87,7 +87,7 @@ hardware"	Racking and mounting	109.6	116.5	118.3	108.5	78.1	182.0	92.2	122.4	161
 
 
 # returns the cost of installing given number of solar panels
-def get_energy_and_cost(number_of_panels, country):
+def get_cost_of_installing(number_of_panels, country):
     system_prompt = """
     ---BEGIN FORMAT TEMPLATE---
     Given this table of costs of installing a solar panel, what is the cost of installing ${NUMBER OF PANELS} solar panels for ${COUNTRY} ? You can assume each panel produces 0.3kW

@@ -1,5 +1,5 @@
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 import os
 import replicate
 import re
@@ -27,7 +27,7 @@ def get_usable_area(user_input_string):
 
 def get_total_area(user_input_string):
     try:
-        llm_output = chat(
+        llm_output = chat.invoke(
             [
                 HumanMessage(
                     content=f"You are a helpful AI assistant. User has provided a textual description of usable area for installing a solar panel. {user_input_string}. Extract the total area in sq ft from the description: "

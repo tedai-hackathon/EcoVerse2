@@ -1,5 +1,5 @@
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 import os
 import replicate
 import re

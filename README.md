@@ -36,9 +36,11 @@ Plans include developing a crowdfunding feature to allow those in off-grid locat
 
 To run the application 
 1. Go to the project root dir
-2. Install the dependencies, `pip install -r requirements.txt`
-3. Update the Open-ai API Key in model.py
-4. Run the server, `streamlit run main.py`
+2. Set up virtual Python environment `python -m venv venv`
+3. Activate it `source ./venv/bin/activate`
+4. Install the dependencies, `pip install -r requirements.txt`
+5. Update the OPENAI_API_KEY and REPLICATE_API_TOKEN in `model.py`
+6. Run the server, `streamlit run main.py`
 
 
 
